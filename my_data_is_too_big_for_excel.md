@@ -10,12 +10,12 @@ WHY: Looking at the first few lines, which, if you're lucky, include a header ro
 
 HOW: On a Mac:
 
-a) Save the dataset in a location you can easily find WITH NO SPACES IN THE FILENAME.
-b) On a mac, open a terminal window (you can do this by searching for `terminal`)
-c) Navigate to the directory containing your data (this is beyond the scope of this lesson, see tktk to learn more about how to do that)
-d) Type `head datafilename` (where datefilename is the name of your actual data file).
-e) Bonus skill: if 10 lines is not quite enough (or too much!), you can add the option -n followed by the number of lines you want. So for example, if I want to see 15 lines of a file called `rachels_awesome_data.csv`, I would type `head rachels_awesome_data -n 15`
-f) Extra bonus skill: `tail` does the same thing as head, except for the last 10 lines.
+1. Save the dataset in a location you can easily find WITH NO SPACES IN THE FILENAME.
+2. On a mac, open a terminal window (you can do this by searching for `terminal`)
+3. Navigate to the directory containing your data (this is beyond the scope of this lesson, see tktk to learn more about how to do that)
+4. Type `head datafilename` (where datefilename is the name of your actual data file).
+5. Bonus skill: if 10 lines is not quite enough (or too much!), you can add the option -n followed by the number of lines you want. So for example, if I want to see 15 lines of a file called `rachels_awesome_data.csv`, I would type `head rachels_awesome_data -n 15`
+6. Extra bonus skill: `tail` does the same thing as head, except for the last 10 lines.
 
 On a PC: tktktk
 
@@ -27,12 +27,12 @@ WHY: A text editor can let you get a better sense of what's in your data and giv
 
 HOW:
 
-a) Get a decent text editor. There are a variety available, some for free, some cost money. I like SublimeText, which requires a license but you can use for free for a while without paying.
-b) Open the file in the text editor. You can open the text editor and go to file>open or right-click the file and look for your text editor, or (on a mac) drag your file to the text editor.
-c) Wait a moment if opening is still slow. If it takes a really long time this trick might not be for you, but many large datasets that fail in excel will open in less than a minute in SublimeText on a computer with decent resources.
-d) Look at your data, scroll around, or search.
-e) If it looks like there are weird characters that might be causing excel trouble, you can possibly find and replace them here, save, and then re-open in excel.
-f) Bonus tip (for SublimeText): You can open a whole folder of data! under file>open, instead of navigating to a file, just click on the folder you want to open! You can then search the whole folder (it might skip really huge files, but will tell you if it does) using find>find in files.
+1. Get a decent text editor. There are a variety available, some for free, some cost money. I like SublimeText, which requires a license but you can use for free for a while without paying.
+2. Open the file in the text editor. You can open the text editor and go to file>open or right-click the file and look for your text editor, or (on a mac) drag your file to the text editor.
+3. Wait a moment if opening is still slow. If it takes a really long time this trick might not be for you, but many large datasets that fail in excel will open in less than a minute in SublimeText on a computer with decent resources.
+4. Look at your data, scroll around, or search.
+5. If it looks like there are weird characters that might be causing excel trouble, you can possibly find and replace them here, save, and then re-open in excel.
+6. Bonus tip (for SublimeText): You can open a whole folder of data! under file>open, instead of navigating to a file, just click on the folder you want to open! You can then search the whole folder (it might skip really huge files, but will tell you if it does) using find>find in files.
 
 ## Use grep
 
@@ -42,13 +42,13 @@ WHY: Grep can search huge files, and if you're just looking to see if one thing 
 
 HOW: On a Mac:
 
-a) Save the dataset in a location you can easily find WITH NO SPACES IN THE FILENAME.
-b) On a mac, open a terminal window (you can do this by searching for `terminal`)
-c) Navigate to the directory containing your data (this is beyond the scope of this lesson, see tktk to learn more about how to do that)
-d) grep is an enormously powerful (and thus complicated) tool, and it is definitely possible to use without understanding everything it can do for you, so do not panic!
-e) To do a simple search type `grep filename -e search_term`. So for example, if I want to search for `rachel` in a document called `people_I_know.txt`, I can type `grep people_I_know.txt -e rachel` and it will print out any lines it finds including `rachel`.
-f) Bonus tip: If you want to know what line `rachel` is in, add -n to your search and it'll print the line number before the relevant line. For example: `grep people_I_know.txt -e rachel -n`
-g) Tutorials: There are a million grep tutorials. I don't have a particular one to recommend, just google `grep tutorial` and pick one that looks nice if you want to learn more grep.
+1. Save the dataset in a location you can easily find WITH NO SPACES IN THE FILENAME.
+2. On a mac, open a terminal window (you can do this by searching for `terminal`)
+3. Navigate to the directory containing your data (this is beyond the scope of this lesson, see tktk to learn more about how to do that)
+4. grep is an enormously powerful (and thus complicated) tool, and it is definitely possible to use without understanding everything it can do for you, so do not panic!
+5. To do a simple search type `grep filename -e search_term`. So for example, if I want to search for `rachel` in a document called `people_I_know.txt`, I can type `grep people_I_know.txt -e rachel` and it will print out any lines it finds including `rachel`.
+6. Bonus tip: If you want to know what line `rachel` is in, add -n to your search and it'll print the line number before the relevant line. For example: `grep people_I_know.txt -e rachel -n`
+7. Tutorials: There are a million grep tutorials. I don't have a particular one to recommend, just google `grep tutorial` and pick one that looks nice if you want to learn more grep.
 
 PC: tktk
 
@@ -60,13 +60,13 @@ WHY: If you want to look at a subset of data in the file, or do some sums or oth
 
 HOW:
 
-a) Make sure you have python installed (if you have a mac, you do, if you have a PC, install it.)
-b) Install pip. Pip is a python installer that lets you easily install python libraries. There are other ways to install csvkit, but in general your life will be better with pip. Start by opening a terminal window and typing `which pip`. If it is not blank, you already have pip! Skip to the next step. Otherwise, download [this file](https://bootstrap.pypa.io/get-pip.py). Figure out where you downloaded it to, navigate there in your terminal, and run `python get-pip.py`.
-c) Type `pip install csvkit`
-d) csvkit is very powerful, and you can find the full documentation, with examples, [here](https://csvkit.readthedocs.io/en/1.0.2/). In the meantime, below are a few examples of things you could do with csvkit. (Assume for all of the examples below that your data is in a file called `data.csv`)
-e) Use csvkit to see the headers of your file: `csvcut -n data.csv`
-f) Use csvkit to move only some colums of your data to another file: `csvcut -c column_a,column_c data.csv > new.csv` where `column_a` and `column_b` are column names found in step e, and `new.csv` is the file that contains only columns a and b. If this file is much smaller, maybe you can now open it in excel!!!
-g) Use csvkit to convert other data formats to csvs: `in2csv data.json > data.csv` where `data.json` is some json data, and `data.csv` is a new file containing your data converted to a csv.
+1. Make sure you have python installed (if you have a mac, you do, if you have a PC, install it.)
+2. Install pip. Pip is a python installer that lets you easily install python libraries. There are other ways to install csvkit, but in general your life will be better with pip. Start by opening a terminal window and typing `which pip`. If it is not blank, you already have pip! Skip to the next step. Otherwise, download [this file](https://bootstrap.pypa.io/get-pip.py). Figure out where you downloaded it to, navigate there in your terminal, and run `python get-pip.py`.
+3. Type `pip install csvkit`
+4. csvkit is very powerful, and you can find the full documentation, with examples, [here](https://csvkit.readthedocs.io/en/1.0.2/). In the meantime, below are a few examples of things you could do with csvkit. (Assume for all of the examples below that your data is in a file called `data.csv`)
+5. Use csvkit to see the headers of your file: `csvcut -n data.csv`
+6. Use csvkit to move only some colums of your data to another file: `csvcut -c column_a,column_c data.csv > new.csv` where `column_a` and `column_b` are column names found in step e, and `new.csv` is the file that contains only columns a and b. If this file is much smaller, maybe you can now open it in excel!!!
+7. Use csvkit to convert other data formats to csvs: `in2csv data.json > data.csv` where `data.json` is some json data, and `data.csv` is a new file containing your data converted to a csv.
 
 
 ## Get more firepower (or find someone who has it and can help you)
