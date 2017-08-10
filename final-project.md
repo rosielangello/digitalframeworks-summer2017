@@ -28,6 +28,14 @@ Submit it as finalproject.md on github
 
 UNLESS you want to put it on an existing blog or website, in which case please still make a file called finalproject.md, and put a link in there.
 
+## Help finding a dataset
+
+Finding your own dataset to look at is one of the primary goals of this project. Here are a few resources that could provide some inspriation:
+
+* The US Government's [data portal](https://www.data.gov/)
+* Jeremy Singer-Vine's newsletter [Data Is Plural](http://tinyletter.com/data-is-plural/archive) (browse the archives)
+
+
 ## Questions
 
 Please get in touch early if you have questions about the project or want to know if an idea you have is on the right track.
